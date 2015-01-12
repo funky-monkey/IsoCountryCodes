@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 Funky Monkey, www.funky-monkey.nl. All rights reserved.
 //
 
-import UIKit
-
 class IsoCountryCodes {
     
     class func find( key:String ) -> IsoCountryInfo {
