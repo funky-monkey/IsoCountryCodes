@@ -24,9 +24,8 @@ class IsoCountryCodes {
         return country
     }
     
-    class func searchByCallingCode( calllingCode:String ) -> IsoCountryInfo {
-        var country = filter( IsoCountries.allCountries, { $0.calling == calllingCode } )
-        return country[0]
-    }
-   
+   class func searchByCallingCode( calllingCode:String ) -> IsoCountryInfo {
+       var country = filter( IsoCountries.allCountries, { $0.calling == calllingCode } )
+       return country[0]
+   }
 }
