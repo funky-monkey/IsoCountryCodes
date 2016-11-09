@@ -1,6 +1,6 @@
 #IsoCountryCodes for Swift
 
-Iso country codes - that thing thsat we discussed that defines codes for the names of countries, dependent territories, and special areas of geographical interest.
+Iso country codes - that thing that we discussed that defines codes for the names of countries, dependent territories, and special areas of geographical interest.
 
 ###What?
 This is a **iOS Swift** library/class  files that does a simple lookup depending on a [alpha2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 "alpha2"), [alpha3](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3 "alpha3") or [numeric](http://en.wikipedia.org/wiki/ISO_3166-1_numeric "numeric") value you give it. Currently it holds all the 249 countries, territories, or areas of geographical interest that are assigned official codes in [ISO 3166-1](http://en.wikipedia.org/wiki/ISO_3166-1 "ISO 3166-1").
