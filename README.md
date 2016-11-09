@@ -19,17 +19,17 @@ This library returns ISO codes, names and currencies for countries.
 Searching an ISO code returns a struct. 
 
 ```
-// Search via numeric, alpha-2 or alpha-3 format     
-println( IsoCountryCodes.find("020").name ) //Andorra
-println( IsoCountryCodes.find("TK").name ) //Tokelau
-println( IsoCountryCodes.find("TKL").currency ) // NZD
+// Search via numeric, alpha-2 or alpha-3 format
+print(IsoCountryCodes.find(key: "020").name) //Andorra
+print(IsoCountryCodes.find(key: "TK").name) //Tokelau
+print(IsoCountryCodes.find(key: "TKL").currency) //NZD
 
 // You can also search by country name, currency or calling/dialing code
-dump( IsoCountryCodes.searchByName("Netherlands" )
-println( IsoCountryCodes.searchByCurrency("EUR").count ) // 31
-println( IsoCountryCodes.searchByCallingCode("+31").name ) // Netherlands
+dump(IsoCountryCodes.searchByName(name: "Netherlands")
+print(IsoCountryCodes.searchByCurrency(currency: "EUR").count ) // 31
+print(IsoCountryCodes.searchByCallingCode(calllingCode: "+31").name ) // Netherlands
 
-var country = IsoCountryCodes.searchByName("Netherlands")
+let country = IsoCountryCodes.searchByName(name: "Netherlands")
 dump(country) // This dumps the full struct in console
 
 /* 
