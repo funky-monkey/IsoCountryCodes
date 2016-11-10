@@ -1,6 +1,6 @@
 #IsoCountryCodes for Swift
-[![Platform](https://img.shields.io/cocoapods/p/Typist.svg?style=flat)](https://github.com/funky-monkey/QuickAdd)
-[![version](https://img.shields.io/badge/version-1.0-brightgreen.svg)] (https://github.com/funky-monkey/QuickAdd) 
+[![Platform](https://img.shields.io/cocoapods/p/Typist.svg?style=flat)](https://github.com/funky-monkey/IsoCountryCodes)
+[![version](https://img.shields.io/badge/version-1.0-brightgreen.svg)] (https://github.com/funky-monkey/IsoCountryCodes) 
 ![Swift Version] (https://img.shields.io/badge/swift-3.0-orange.svg?style=flat)
 
 Iso country codes - that thing that we discussed that defines codes for the names of countries, dependent territories, and special areas of geographical interest.
