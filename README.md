@@ -21,7 +21,7 @@ This library returns ISO codes, names and currencies for countries.
 
 Searching an ISO code returns a struct. 
 
-```
+```swift
 // Search via numeric, alpha-2 or alpha-3 format
 print(IsoCountryCodes.find(key: "020").name) //Andorra
 print(IsoCountryCodes.find(key: "TK").name) //Tokelau
