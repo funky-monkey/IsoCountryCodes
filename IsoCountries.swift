@@ -15,9 +15,22 @@ struct IsoCountryInfo {
     var calling:String
     var currency:String
     var continent:String
+    var flag: String {
+        return IsoCountries.flag(countryCode: alpha2)
+    }
 }
 
 class IsoCountries {
+    
+    class func flag(countryCode: String) -> String {
+        var string = ""
+        var country = countryCode.uppercased()
+        for uS in country.unicodeScalars {
+            print(UnicodeScalar(127397 + uS.value)!)
+            string.unicodeScalars.append(UnicodeScalar(127397 + uS.value)!)
+        }
+        return string
+    }
     
     class var allCountries:Array<IsoCountryInfo> {
         
