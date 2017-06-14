@@ -26,7 +26,6 @@ class IsoCountries {
         var string = ""
         var country = countryCode.uppercased()
         for uS in country.unicodeScalars {
-            print(UnicodeScalar(127397 + uS.value)!)
             string.unicodeScalars.append(UnicodeScalar(127397 + uS.value)!)
         }
         return string
