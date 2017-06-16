@@ -31,7 +31,8 @@ class IsoCountries {
         let base = regionalA[regionalA.startIndex].value - letterA[letterA.startIndex].value
         
         for scalar in country.unicodeScalars {
-            string.unicodeScalars.append(UnicodeScalar(127397 + scalar.value)!)
+            guard let regionalScalar = UnicodeScalar(base + scalar.value) else { return "" }
+            string.unicodeScalars.append(regionalScalar)
         }
         return string
     }
