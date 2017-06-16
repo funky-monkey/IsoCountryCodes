@@ -1,14 +1,14 @@
-#IsoCountryCodes for Swift
-[![Platform](https://img.shields.io/cocoapods/p/Typist.svg?style=flat)](https://github.com/funky-monkey/IsoCountryCodes)
-[![version](https://img.shields.io/badge/version-1.0-brightgreen.svg)] (https://github.com/funky-monkey/IsoCountryCodes) 
-![Swift Version] (https://img.shields.io/badge/swift-3.0-orange.svg?style=flat)
+# IsoCountryCodes for Swift
+![Platform](https://img.shields.io/cocoapods/p/Typist.svg?style=flat)
+![version](https://img.shields.io/badge/version-1.0-brightgreen.svg)
+![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat)
 
 Iso country codes - that thing that we discussed that defines codes for the names of countries, dependent territories, and special areas of geographical interest.
 
-###What?
+### What?
 This is a **iOS Swift** library/class  files that does a simple lookup depending on a [alpha2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 "alpha2"), [alpha3](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3 "alpha3") or [numeric](http://en.wikipedia.org/wiki/ISO_3166-1_numeric "numeric") value you give it. Currently it holds all the 249 countries, territories, or areas of geographical interest that are assigned official codes in [ISO 3166-1](http://en.wikipedia.org/wiki/ISO_3166-1 "ISO 3166-1").
 
-###Features:
+### Features:
 
 This library returns ISO codes, names and currencies for countries.
 
@@ -17,7 +17,7 @@ This library returns ISO codes, names and currencies for countries.
 - [x] Search by currency code
 - [x] Search by by dialing code (+31 for Nethelands, +1 for USA, etc...)
 
-###Usage:
+### Usage:
 
 Searching an ISO code returns a struct. 
 
@@ -47,10 +47,10 @@ dump(country) // This dumps the full struct in console
 */
 ```
 
-###Usage:
+### Usage:
 
 Copy/add files to your project
 
-###Licence:
+### Licence:
 
 The 'do-whatever-you-please-with-it licence. Use it or abuse it. Just keep my name at the top of the files.
