@@ -37,8 +37,9 @@ print(IsoCountryCodes.searchByCallingCode(calllingCode: "+31").name ) // Netherl
 
 let country = IsoCountryCodes.searchByName(name: "Netherlands")
 dump(country) // This dumps the full struct in console
-
-/* 
+```
+This returns a `IsoCountryInfo` struct:
+```swift
 ▿ IsoCountryCodes.IsoCountryInfo
     - name: Netherlands
     - numeric: 528
@@ -47,7 +48,6 @@ dump(country) // This dumps the full struct in console
     - calling: +31
     - currency: EUR
     - continent: EU
-*/
 ```
 
 ### Fun with flags
