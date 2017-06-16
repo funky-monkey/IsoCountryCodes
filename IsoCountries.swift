@@ -25,8 +25,8 @@ class IsoCountries {
     class func flag(countryCode: String) -> String {
         var string = ""
         var country = countryCode.uppercased()
-        for uS in country.unicodeScalars {
-            string.unicodeScalars.append(UnicodeScalar(127397 + uS.value)!)
+        for scalar in country.unicodeScalars {
+            string.unicodeScalars.append(UnicodeScalar(127397 + scalar.value)!)
         }
         return string
     }
