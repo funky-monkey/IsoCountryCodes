@@ -16,18 +16,21 @@ This library returns ISO codes, names and currencies for countries.
 - [x] Search by name
 - [x] Search by currency code
 - [x] Search by by dialing code (+31 for Nethelands, +1 for USA, etc...)
+- [x] Retrieve a corresponding emoji flag from a country code.
 
 ### Usage:
 
+You can search via numeric, alpha-2 or alpha-3 format. 
 Searching an ISO code returns a struct. 
 
 ```swift
-// Search via numeric, alpha-2 or alpha-3 format
 print(IsoCountryCodes.find(key: "020").name) //Andorra
 print(IsoCountryCodes.find(key: "TK").name) //Tokelau
 print(IsoCountryCodes.find(key: "TKL").currency) //NZD
+```
 
-// You can also search by country name, currency or calling/dialing code
+You can also search by country name, currency or calling/dialing code
+```swift
 dump(IsoCountryCodes.searchByName(name: "Netherlands")
 print(IsoCountryCodes.searchByCurrency(currency: "EUR").count ) // 31
 print(IsoCountryCodes.searchByCallingCode(calllingCode: "+31").name ) // Netherlands
@@ -36,15 +39,29 @@ let country = IsoCountryCodes.searchByName(name: "Netherlands")
 dump(country) // This dumps the full struct in console
 
 /* 
-	▿ IsoCountryCodes.IsoCountryInfo
-	- name: Netherlands
-	- numeric: 528
-	- alpha2: NL
-	- alpha3: NLD
-	- calling: +31
-	- currency: EUR
-	- continent: EU
+▿ IsoCountryCodes.IsoCountryInfo
+    - name: Netherlands
+    - numeric: 528
+    - alpha2: NL
+    - alpha3: NLD
+    - calling: +31
+    - currency: EUR
+    - continent: EU
 */
+```
+
+### Fun with flags
+Retrieve a corresponding emoji flag from a country code. (Thanks to @lorismaz for this addition!)
+
+```swift
+let emojiString = IsoCountries.flag(countryCode: "NL")
+// Prints 🇳🇱
+``` 
+or
+
+```swift
+let emojiString = IsoCountryCodes.find(key: "USA").flag
+// Prints 🇺🇸
 ```
 
 ### Usage:
