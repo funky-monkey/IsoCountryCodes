@@ -19,6 +19,12 @@ class IsoCountryCodes {
         return (!country.isEmpty) ? country[0] : IsoCountryInfo(name: "", numeric: "", alpha2: "", alpha3: "", calling: "", currency: "", continent: "")
     }
     
+    class func searchByNumeric( numeric:String ) -> IsoCountryInfo {
+        var country = IsoCountries.allCountries.filter( { $0.numeric == numeric } )
+        
+        return (!country.isEmpty) ? country[0] : IsoCountryInfo(name: "", numeric: "", alpha2: "", alpha3: "", calling: "", currency: "", continent: "")
+    }
+    
     class func searchByCurrency( currency:String ) -> [IsoCountryInfo] {
         let country = IsoCountries.allCountries.filter(  { $0.currency == currency } )
         return country
