@@ -1,7 +1,7 @@
 # IsoCountryCodes for Swift
 ![Platform](https://img.shields.io/cocoapods/p/Typist.svg?style=flat)
 ![version](https://img.shields.io/badge/version-1.0-brightgreen.svg)
-![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat)
+![Swift Version](https://img.shields.io/badge/swift-4.2-orange.svg?style=flat)
 
 Iso country codes - that thing that we discussed that defines codes for the names of countries, dependent territories, and special areas of geographical interest.
 
@@ -15,8 +15,8 @@ This library returns ISO codes, names and currencies for countries.
 - [x] Find by alpha-2, alpha-3 or numeric (String - yes I know...)
 - [x] Search by name
 - [x] Search by currency code
-- [x] Search by by dialing code (+31 for Nethelands, +1 for USA, etc...)
-- [x] Retrieve a corresponding emoji flag from a country code.
+- [x] Search by phone dialing code (+31 for Netherlands, +1 for USA, etc...)
+- [x] Retrieve a corresponding emoji flag for a country code.
 
 ### Usage:
 
@@ -28,17 +28,18 @@ print(IsoCountryCodes.find(key: "020").name) //Andorra
 print(IsoCountryCodes.find(key: "TK").name) //Tokelau
 print(IsoCountryCodes.find(key: "TKL").currency) //NZD
 ```
+You can also search by country name, currency or calling/dialing code:
 
-You can also search by country name, currency or calling/dialing code
 ```swift
-dump(IsoCountryCodes.searchByName(name: "Netherlands")
-print(IsoCountryCodes.searchByCurrency(currency: "EUR").count ) // 31
-print(IsoCountryCodes.searchByCallingCode(calllingCode: "+31").name ) // Netherlands
+dump(IsoCountryCodes.searchByName("Netherlands")
+print(IsoCountryCodes.searchByCurrency("EUR").count ) // 31
+print(IsoCountryCodes.searchByCallingCode("+31").name ) // Netherlands
 
-let country = IsoCountryCodes.searchByName(name: "Netherlands")
+let country = IsoCountryCodes.searchByName("Netherlands")
 dump(country) // This dumps the full struct in console
 ```
 This returns a `IsoCountryInfo` struct:
+
 ```swift
 ▿ IsoCountryCodes.IsoCountryInfo
     - name: Netherlands
