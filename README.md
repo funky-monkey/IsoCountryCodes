@@ -13,7 +13,7 @@ This is a **iOS Swift** library/class  files that does a simple lookup depending
 This library returns ISO codes, names and currencies for countries.
 
 - [x] Find by alpha-2, alpha-3 or numeric (String - yes I know...)
-- [x] Search by name
+- [x] Search by (partial) name, case- and diacritic insensitive
 - [x] Search by currency code
 - [x] Search by phone dialing code (+31 for Netherlands, +1 for USA, etc...)
 - [x] Retrieve a corresponding emoji flag for a country code.
@@ -49,6 +49,29 @@ This returns a `IsoCountryInfo` struct:
     - calling: +31
     - currency: EUR
     - continent: EU
+```
+Searching by name is case- and diacritic insensitive:
+
+```swift
+dump(IsoCountryCodes.searchByName("netherlands"))
+dump(IsoCountryCodes.searchByName("NETHERLANDS"))
+
+dump(IsoCountryCodes.searchByName("Réunion"))
+dump(IsoCountryCodes.searchByName("Reunion"))
+```
+If no full match is found, a partial match is tried:
+
+```swift
+// Full name is "Venezuela, Bolivarian Republic of"
+dump(IsoCountryCodes.searchByName("Venezuela"))
+```
+but nothing is returned if the search results would be ambiguous:
+
+```swift
+// There are two Virgin Islands country codes:
+// "Virgin Islands, British" and "Virgin Islands, U.S."
+dump(IsoCountryCodes.searchByName("Virgin Islands"))
+
 ```
 
 ### Fun with flags
