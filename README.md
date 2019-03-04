@@ -33,7 +33,7 @@ You can also search by country name, currency or calling/dialing code:
 ```swift
 dump(IsoCountryCodes.searchByName("Netherlands")
 print(IsoCountryCodes.searchByCurrency("EUR").count ) // 31
-print(IsoCountryCodes.searchByCallingCode("+31").name ) // Netherlands
+print(IsoCountryCodes.searchByCallingCode("+31").first ) // Netherlands
 
 let country = IsoCountryCodes.searchByName("Netherlands")
 dump(country) // This dumps the full struct in console
