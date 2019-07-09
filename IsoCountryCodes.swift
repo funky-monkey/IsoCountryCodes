@@ -6,15 +6,15 @@
 //  Copyright (c) 2015 Funky Monkey, www.funky-monkey.nl. All rights reserved.
 //
 
-class IsoCountryCodes {
+public class IsoCountryCodes {
 
-    class func find(key: String) -> IsoCountryInfo? {
+    public class func find(key: String) -> IsoCountryInfo? {
         let countries = IsoCountries.allCountries.filter({ $0.alpha2 == key.uppercased() ||
             $0.alpha3 == key.uppercased() || $0.numeric == key })
         return countries.first
     }
 
-    class func searchByName(_ name: String) -> IsoCountryInfo? {
+    public class func searchByName(_ name: String) -> IsoCountryInfo? {
         let options: String.CompareOptions = [.diacriticInsensitive, .caseInsensitive]
         let name = name.folding(options: options, locale: .current)
         let countries = IsoCountries.allCountries.filter({
@@ -41,17 +41,17 @@ class IsoCountryCodes {
         return countries.first
     }
 
-    class func searchByNumeric(_ numeric: String) -> IsoCountryInfo? {
+    public class func searchByNumeric(_ numeric: String) -> IsoCountryInfo? {
         let countries = IsoCountries.allCountries.filter({ $0.numeric == numeric })
         return countries.first
     }
 
-    class func searchByCurrency(_ currency: String) -> [IsoCountryInfo] {
+    public class func searchByCurrency(_ currency: String) -> [IsoCountryInfo] {
         let countries = IsoCountries.allCountries.filter({ $0.currency == currency })
         return countries
     }
 
-    class func searchByCallingCode(_ calllingCode: String) -> [IsoCountryInfo] {
+    public class func searchByCallingCode(_ calllingCode: String) -> [IsoCountryInfo] {
         let countries = IsoCountries.allCountries.filter({ $0.calling == calllingCode })
         return countries
     }

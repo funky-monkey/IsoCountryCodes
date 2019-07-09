@@ -6,24 +6,24 @@
 //  Copyright (c) 2015 Funky Monkey, www.funky-monkey.nl. All rights reserved.
 //
 
-struct IsoCountryInfo {
+public struct IsoCountryInfo {
 
-    let name: String
-    let numeric: String
-    let alpha2: String
-    let alpha3: String
-    let calling: String
-    let currency: String
-    let continent: String
-    var flag: String? {
+    public let name: String
+    public let numeric: String
+    public let alpha2: String
+    public let alpha3: String
+    public let calling: String
+    public let currency: String
+    public let continent: String
+    public var flag: String? {
         return IsoCountries.flag(countryCode: alpha2)
     }
 }
 
 // swiftlint:disable type_body_length
-class IsoCountries {
+public class IsoCountries {
 
-    class func flag(countryCode: String) -> String? {
+    public class func flag(countryCode: String) -> String? {
         var string = ""
         let country = countryCode.uppercased()
 
