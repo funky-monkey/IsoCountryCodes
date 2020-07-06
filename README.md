@@ -75,7 +75,7 @@ dump(IsoCountryCodes.searchByName("Virgin Islands"))
 ```
 
 ### Fun with flags
-Retrieve a corresponding emoji flag from a country code. (Thanks to @lorismaz for this addition!)
+Retrieve a corresponding emoji flag from a country code. (Thanks to [@lorismaz](https://github.com/lorismaz) for this addition!)
 
 ```swift
 let emojiString = IsoCountries.flag(countryCode: "NL")
