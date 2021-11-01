@@ -17,6 +17,7 @@ This library returns ISO codes, names and currencies for countries.
 - [x] Search by currency code
 - [x] Search by phone dialing code (+31 for Netherlands, +1 for USA, etc...)
 - [x] Retrieve a corresponding emoji flag for a country code.
+- [x] Retrieve a fraction digits or decimal places for a country's currency. This can be useful when converting an amount in a certain currency to digits (ex 1 euro = 100 cent, 1 KD = 1000 fils)
 
 ### Usage:
 
