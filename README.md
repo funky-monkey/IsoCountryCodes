@@ -76,7 +76,7 @@ dump(IsoCountryCodes.searchByName("Virgin Islands"))
 ```
 
 ### Fun with flags
-Retrieve a corresponding emoji flag from a country code. (Thanks to [@lorismaz](https://github.com/lorismaz) for this addition!)
+Retrieve a corresponding emoji flag from a country code. (Thanks to [@lorismaz](https://github.com/lorismaz) for this addition)
 
 ```swift
 let emojiString = IsoCountries.flag(countryCode: "NL")
@@ -87,6 +87,22 @@ or
 ```swift
 let emojiString = IsoCountryCodes.find(key: "USA").flag
 // Prints 🇺🇸
+```
+
+### Retrieve fractional digits
+Retrieve fractional digits or decimal places for a country's currency. This can be useful when converting an amount in a certain currency to digits. For example   calculating how many cents go into 1 euro (100 cent), or in Kuwaiti dinar; 1 KD = 1000 fils. This is convenient when working with banks or payment providers. (Thanks to [@mohameditani](https://github.com/mohameditani) for this addition).
+
+```swift
+func transformToDigits(price: Double, country: IsoCountryInfo) -> Double {
+  let fractionDigits = country.fractionDigits
+  let amount = price * pow(10.0, Double(fractionDigits))
+  return amount
+}
+
+let priceOfCoffee = 2.05
+let country = IsoCountryCodes.searchByName("Italy") // fractionDigits for Italy is 2
+let digits = transformToDigits(priceOfCoffee, country)
+// 205 cents
 ```
 
 ### Usage:
