@@ -290,7 +290,11 @@ public class IsoCountries {
         IsoCountryInfo(name: "Western Sahara", numeric: "732", alpha2: "EH", alpha3: "ESH", calling: "+212", currency: "MAD", continent: "AF", fractionDigits: 2),
         IsoCountryInfo(name: "Yemen", numeric: "887", alpha2: "YE", alpha3: "YEM", calling: "+967", currency: "YER", continent: "AS", fractionDigits: 2),
         IsoCountryInfo(name: "Zambia", numeric: "894", alpha2: "ZM", alpha3: "ZMB", calling: "+260", currency: "ZMW", continent: "AF", fractionDigits: 2),
-        IsoCountryInfo(name: "Zimbabwe", numeric: "716", alpha2: "ZW", alpha3: "ZWE", calling: "+263", currency: "ZWD", continent: "AF", fractionDigits: 2)]
+        IsoCountryInfo(name: "Zimbabwe", numeric: "716", alpha2: "ZW", alpha3: "ZWE", calling: "+263", currency: "ZWD", continent: "AF", fractionDigits: 2),
+        // Additional ones defined by GS1 (e.g. Trade Item Implementation Guide (https://www.gs1.org/docs/gdsn/tiig/3_1/GDSN_Trade_Item_Implementation_Guide.pdf)
+        IsoCountryInfo(name: "World", numeric: "001", alpha2: "", alpha3: "", calling: "", currency: "", continent: "", fractionDigits: 0),
+        IsoCountryInfo(name: "European Union", numeric: "097", alpha2: "EU", alpha3: "", calling: "", currency: "EUR", continent: "EU", fractionDigits: 0)
+    ]
     // swiftlint:enable line_length
 }
 // swiftlint:enable type_body_length
