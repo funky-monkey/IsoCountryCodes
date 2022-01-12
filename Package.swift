@@ -1,4 +1,4 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.5
 //
 //  Package.swift
 //  IsoCountryCodes
@@ -11,6 +11,10 @@ import PackageDescription
 
 let package = Package(
     name: "IsoCountryCodes",
+    platforms: [.iOS(.v9),
+                .macOS(.v10_12),
+                .watchOS(.v6),
+                .tvOS(.v10)],
     products: [
         .library(
             name: "IsoCountryCodes",
