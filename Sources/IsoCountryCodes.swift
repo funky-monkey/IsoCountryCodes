@@ -9,11 +9,12 @@
 import Foundation
 
 public class IsoCountryCodes {
-
     public class func find(key: String) -> IsoCountryInfo? {
-        let countries = IsoCountries.allCountries.filter({ $0.alpha2 == key.uppercased() ||
-            $0.alpha3 == key.uppercased() || $0.numeric == key })
-        return countries.first
+        return IsoCountries.allCountries.first {
+            $0.alpha2 == key.uppercased() ||
+            $0.alpha3 == key.uppercased() ||
+            $0.numeric == key
+        }
     }
 
     public class func searchByName(_ name: String) -> IsoCountryInfo? {
@@ -44,8 +45,9 @@ public class IsoCountryCodes {
     }
 
     public class func searchByNumeric(_ numeric: String) -> IsoCountryInfo? {
-        let countries = IsoCountries.allCountries.filter({ $0.numeric == numeric })
-        return countries.first
+        return IsoCountries.allCountries.first {
+            $0.numeric == numeric
+        }
     }
 
     public class func searchByCurrency(_ currency: String) -> [IsoCountryInfo] {
