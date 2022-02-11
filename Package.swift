@@ -18,13 +18,20 @@ let package = Package(
     products: [
         .library(
             name: "IsoCountryCodes",
-            targets: ["IsoCountryCodes"]),
+            targets: ["IsoCountryCodes"]
+        ),
     ],
     dependencies: [],
     targets: [
         .target(
             name: "IsoCountryCodes",
             dependencies: [],
-            path: "Sources")
+            path: "Sources"
+        ),
+        .testTarget(
+            name: "IsoCountryCodesTests",
+            dependencies: ["IsoCountryCodes"],
+            path: "Tests"
+        ),
     ]
 )
