@@ -161,6 +161,7 @@ public class IsoCountries {
         IsoCountryInfo(name: "Kiribati", numeric: "296", alpha2: "KI", alpha3: "KIR", calling: "+686", currency: "AUD", continent: "OC", fractionDigits: 2),
         IsoCountryInfo(name: "Korea, Democratic People's Republic of", numeric: "408", alpha2: "KP", alpha3: "PRK", calling: "+850", currency: "KPW", continent: "AS", fractionDigits: 2),
         IsoCountryInfo(name: "Korea, Republic of", numeric: "410", alpha2: "KR", alpha3: "KOR", calling: "+82", currency: "KRW", continent: "AS", fractionDigits: 0),
+        IsoCountryInfo(name: "Kosovo", numeric: "0", alpha2: "XK", alpha3: "XKS", calling: "+383", currency: "EUR", continent: "EU", fractionDigits: 2),
         IsoCountryInfo(name: "Kuwait", numeric: "414", alpha2: "KW", alpha3: "KWT", calling: "+965", currency: "KWD", continent: "AS", fractionDigits: 3),
         IsoCountryInfo(name: "Kyrgyzstan", numeric: "417", alpha2: "KG", alpha3: "KGZ", calling: "+996", currency: "KGS", continent: "AS", fractionDigits: 2),
         IsoCountryInfo(name: "Lao People's Democratic Republic", numeric: "418", alpha2: "LA", alpha3: "LAO", calling: "+856", currency: "LAK", continent: "AS", fractionDigits: 2),
